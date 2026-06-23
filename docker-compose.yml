@@ -1,0 +1,31 @@
+services:
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: tdpowa-backend:latest
+    container_name: tdpowa-backend
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+    expose:
+      # Internal-only — only reachable from the frontend container via the
+      # Compose network.  Nginx in the frontend proxies /api/* to here.
+      - "3000"
+    volumes:
+      # Bind-mount the host's ./server/data into the container so the
+      # leaderboard JSON persists across rebuilds & redeploys (Coolify-safe).
+      - ./server/data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tdpowa-frontend:latest
+    container_name: tdpowa-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

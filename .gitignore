@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+.vscode/
+.idea/
+.env
+.env.local
+# Backend persistence — keep the directory (via .gitkeep) but ignore the data files
+server/data/*
+!server/data/.gitkeep
+server/node_modules/

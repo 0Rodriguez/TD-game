@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 22" width="10" height="22">
+
+  <!-- Mini pencil projectile — tip at top (SVG y=0) -->
+  <!-- Rotated via setRotation(firingAngle + Math.PI/2) in Phaser -->
+
+  <!-- ── Eraser ── -->
+  <rect x="3" y="17.5" width="4" height="4" rx="1.2"
+        fill="#e8a0a0" stroke="#2a2a2a" stroke-width="0.8"/>
+
+  <!-- ── Ferrule ── -->
+  <rect x="3" y="14" width="4" height="3.5"
+        fill="#aaaaaa" stroke="#2a2a2a" stroke-width="0.75"/>
+  <line x1="3" y1="15.8" x2="7" y2="15.8"
+        stroke="#2a2a2a" stroke-width="0.5" opacity="0.55"/>
+
+  <!-- ── Yellow body ── -->
+  <rect x="3" y="5.5" width="4" height="8.5"
+        fill="#f5d060" stroke="#2a2a2a" stroke-width="0.8"/>
+  <!-- grain line -->
+  <line x1="4.6" y1="6.5" x2="4.6" y2="13.5"
+        stroke="#c8a020" stroke-width="0.5" opacity="0.55"/>
+
+  <!-- ── Wood taper ── -->
+  <polygon points="3,5.5 7,5.5 5,1.5"
+           fill="#d4a030" stroke="#2a2a2a" stroke-width="0.8"
+           stroke-linejoin="round"/>
+  <!-- sketch wobble -->
+  <polygon points="2.7,5.8 7.3,5.3 5,1.2"
+           fill="none" stroke="#666" stroke-width="0.4" opacity="0.3"
+           stroke-linejoin="round"/>
+
+  <!-- ── Graphite tip ── -->
+  <polygon points="4.4,1.5 5.6,1.5 5,0"
+           fill="#1a1a1a"/>
+
+</svg>
